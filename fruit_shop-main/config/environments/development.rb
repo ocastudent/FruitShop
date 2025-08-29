@@ -1,6 +1,9 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
+
+  Rails.application.config.active_storage.variant_processor = :mini_magick 
+
   # Settings specified here will take precedence over those in config/application.rb.
   config.action_controller.forgery_protection_origin_check = false
   # Make code changes take effect immediately without server restart.

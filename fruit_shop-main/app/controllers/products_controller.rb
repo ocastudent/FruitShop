@@ -60,4 +60,8 @@ class ProductsController < ApplicationController
         redirect_to products_path, alert: '管理者権限が必要です。'
       end
     end
+
+    def product_params
+      params.require(:product).permit(:name, :description, :price, :photo)  # パラメータにphotoを追加
+    end
 end
